@@ -1,19 +1,6 @@
 ## HTML-JS-Calculator
 
-A calculator designed in pure HTML, CSS, and JS
-
-/******************************************************************************<br />
-			*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*<br />
-			*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*<br />
-			*.*.*															                              *.*.*<br />
-			*.*.*	Project Name: HTML-JS-Calculator					                *.*.*<br />
-			*.*.*	Purpose:		  Develop a nice looking multi-function       *.*.*<br />
-			*.*.*					      calculator that works via JavaScipt         *.*.*<br />
-			*.*.*	Developed By:	Caleb Uche (Khaleb O'Brien)				          *.*.*<br />
-			*.*.*															                              *.*.*<br />
-			*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*<br />
-			*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*<br />
-	******************************************************************************/
+A calculator designed in pure HTML, CSS, and JS.
 
 ## Currently Supported Browsers
 
