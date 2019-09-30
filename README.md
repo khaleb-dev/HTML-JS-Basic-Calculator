@@ -1,4 +1,4 @@
-## HTML-JS-Calculator
+## HTML-JS-Basic-Calculator
 
 A calculator designed in pure HTML, CSS, and JS.
 
