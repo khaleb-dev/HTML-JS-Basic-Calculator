@@ -5,157 +5,44 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=yes">
     <meta name="author" content="Khaleb O'Brien">
 
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     <!-- the layout of this calculator might change and get messed up because I built it on my phone with respect to my phones screen size and not a PC screen size. But don't worry, it will still do your calculation -->
 
-    <!-- the logical buttons are not working yet, please I need help. thank you -->
- <style>
-
-   body {
-    font-family: Verdana, sans-serif;
-    font-size: 0.8em;
-    margin: 0px;
-    background: white;
-        }
-
-   #content {
-    text-align: center;
-    margin: auto;
-    height: 800px;
-    padding: 10px 8px 8px 8px;
-    background-color: #000000;
-            }
-
-   button {
-    width: 60px;
-    height: 60px;
-    margin-top: 5px;
-    text-align: center;
-    font-size: 25px;
-    background-color: #c0c0c0;
-    color: #ffffff;
-    border: none;
-    border-radius: 80px;
-    box-shadow:1px 2px 3px 1px black;
-    text-shadow:1px 1px 3px black;
-    opacity: 0.8;
-           }
-   .numbs {
-    background-color: #ffa500;
-    color: #ffffff;
-    opacity: none;
-          }
-
-   input {
-    width: 250px;
-    font-size: 30px;
-    background-color: #000009;
-    opacity: 0.9;
-    color: #696969;
-    border: none;
-    text-align: right;
-    box-shadow:1px 2px 3px 1px black;
-    text-shadow:1px 1px 3px black;
-    max-text: 500;
-        }
-
- </style>
+    <!-- the logic buttons are not working yet, please I need help. thank you -->
 </head>
 
 <body>
-       <div id='content'>
-          <div id='content-app'>
-                    <input type='text' id='smdisplay' readonly value='0' />
-                    <input text='text' id='lgdisplay' readonly value='0' style="color: dcdcdc" />
-                    <br /><br />
+    <div id='content'>
+        <div id='content-app'>
+            <input type='text' id='smdisplay' readonly value='0' />
+            <input text='text' id='lgdisplay' readonly value='0' />
+            <br /><br />
 
-                    <button onclick='setOperator(this)' id='modulus' class="operand">%</button>
-                    <button onclick='cleartxt()' id='C'>C</button>
-                    <button onclick='removeLastNumber()' id='removeLast'>Bk</button>
-                    <button onclick='setDecimal(this)' id='dec'>.</button><br />
-                    <button onclick='writeNumber(this)' id='n1' class='numbs'>1</button>
-                    <button onclick='writeNumber(this)' id='n2' class='numbs'>2</button>
-                    <button onclick='writeNumber(this)' id='n3' class='numbs'>3</button>
-                    <button onclick='setOperator(this)' id='sum'>+</button><br />
-                    <button onclick='writeNumber(this)' id='n4' class='numbs'>4</button>
-                    <button onclick='writeNumber(this)' id='n5' class='numbs'>5</button>
-                    <button onclick='writeNumber(this)' id='n6' class='numbs'>6</button>
-                    <button onclick='setOperator(this)' id='subtract'>-</button><br />
-                    <button onclick='writeNumber(this)' id='n7' class='numbs'>7</button>
-                    <button onclick='writeNumber(this)' id='n8' class='numbs'>8</button>
-                    <button onclick='writeNumber(this)' id='n9' class='numbs'>9</button>
-                               <button onclick='setOperator(this)' id='multi'>*</button><br />
-                    <button onclick='setOperator(this)' id='multi'>&&</button>                    
-                    <button onclick='writeNumber(this)' id='n0' class='numbs'>0</button>
-                               <button onclick='setOperator(this)' id='multi'>||</button>
-                    <button onclick='setOperator(this)' id='divide'>/</button><br />
-                    <button onclick='calculate()' id='calcular' style='width:255px'>=</button>
-          </div>
-            </div>
+            <button onclick='setOperator(this)' id='modulus' class="operand">%</button>
+            <button onclick='cleartxt()' id='C'>C</button>
+            <button onclick='removeLastNumber()' id='removeLast'>Bk</button>
+            <button onclick='setDecimal(this)' id='dec'>.</button><br />
+            <button onclick='writeNumber(this)' id='n1' class='numbs'>1</button>
+            <button onclick='writeNumber(this)' id='n2' class='numbs'>2</button>
+            <button onclick='writeNumber(this)' id='n3' class='numbs'>3</button>
+            <button onclick='setOperator(this)' id='sum'>+</button><br />
+            <button onclick='writeNumber(this)' id='n4' class='numbs'>4</button>
+            <button onclick='writeNumber(this)' id='n5' class='numbs'>5</button>
+            <button onclick='writeNumber(this)' id='n6' class='numbs'>6</button>
+            <button onclick='setOperator(this)' id='subtract'>-</button><br />
+            <button onclick='writeNumber(this)' id='n7' class='numbs'>7</button>
+            <button onclick='writeNumber(this)' id='n8' class='numbs'>8</button>
+            <button onclick='writeNumber(this)' id='n9' class='numbs'>9</button>
+            <button onclick='setOperator(this)' id='multi'>*</button><br />
+            <button onclick='setOperator(this)' id='multi'>&&</button>                    
+            <button onclick='writeNumber(this)' id='n0' class='numbs'>0</button>
+            <button onclick='setOperator(this)' id='multi'>||</button>
+            <button onclick='setOperator(this)' id='divide'>/</button><br />
+            <button onclick='calculate()' id='calcular' style='width:255px'>=</button>
+        </div>
+    </div>
 
-    <script>
-function writeNumber(elementId){
-     var outputValueTo = document.getElementById('smdisplay');
-        
-        if(outputValueTo.value =='0' || outputValueTo.value =='Syntax error'){
-            outputValueTo.value  =elementId.textContent;
-        }else{
-
-            outputValueTo.value  +=elementId.textContent;
-        }
-}
-
-function cleartxt(){
-    document.getElementById('smdisplay').value='0';
-    document.getElementById('dec').disabled=false;
-}
-
-function setOperator(elementId){
-    var outputValueTo = document.getElementById('smdisplay');
-    if(outputValueTo.value =='0' || outputValueTo.value =='Syntax error'){
-       outputValueTo.value='0';
-    }else{
-       outputValueTo.value  +=elementId.textContent;
-       document.getElementById('dec').disabled=false;
-}
-}
-function setDecimal(elementId,status){
-    var outputValueTo = document.getElementById('smdisplay');
-    outputValueTo.value  +=elementId.textContent;
-    document.getElementById('dec').disabled=status;
-}
-function calculate(){
-
-try {
-
-    var field1txt=document.getElementById('smdisplay');
-    var secondscreen = document.getElementById('lgdisplay');
-    if (field1txt.value !='') {
-        var calculateResult=eval(field1txt.value);
-        secondscreen.value=calculateResult;
-    }
-}
-catch(err) {
-
-field1txt.value='Syntax error';
-
- }
-
-}
-
-        function removeLastNumber()
-        {
-
-            var field1txt = document.getElementById('smdisplay');
-
-            if (field1txt.value.length == 1 || field1txt.value == '0' || field1txt.value == 'Syntax error')
-            {
-                field1txt.value = '0';
-                document.getElementById('dec').disabled = false;
-            }
-            else {
-                field1txt.value = field1txt.value.substring(0, field1txt.value.length - 1);
-            }
-        }
-    </script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

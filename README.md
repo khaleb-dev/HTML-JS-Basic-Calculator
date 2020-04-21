@@ -1,6 +1,6 @@
 ## HTML-JS-Basic-Calculator
 
-A calculator designed in pure HTML, CSS, and JS.
+A calculator designed in HTML, CSS, and JS (vanilla).
 
 ## Currently Supported Browsers
 
@@ -12,3 +12,9 @@ A calculator designed in pure HTML, CSS, and JS.
 | Safira            |              |              |    ✓          |
 | Opera Mini        |    5+        |   ✓          |    ✓          |
 | UC Browser        |    12+       |   ✓          |    ✓          |
+
+## Issues
+
+The layout of this calculator might change and get messed up because I built it on my phone with respect to my phones screen size and not a PC screen size. But don't worry, it will still do your calculation.
+
+The logic buttons are not working yet, please I need help. thank you.
