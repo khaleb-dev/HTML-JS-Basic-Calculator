@@ -1,15 +1,18 @@
 body {
     font-family: Verdana, sans-serif;
     font-size: 0.8em;
-    margin: 0px;
-    background: white;
+    /*margin: 0px;*/
+    background: #000000;
 }
 #content {
     text-align: center;
     margin: auto;
-    height: 800px;
     padding: 10px 8px 8px 8px;
     background-color: #000000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 button {
     width: 60px;
@@ -32,6 +35,8 @@ button {
 }
 input {
     width: 250px;
+    display: block;
+    margin: auto;
     font-size: 30px;
     background-color: #000009;
     opacity: 0.9;
