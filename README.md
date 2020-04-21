@@ -17,4 +17,4 @@ A calculator designed in HTML, CSS, and JS (vanilla).
 
 The layout of this calculator might change and get messed up because I built it on my phone with respect to my phones screen size and not a PC screen size. But don't worry, it will still do your calculation.
 
-The logic buttons are not working yet, please I need help. thank you.
+The logic buttons are not working yet, I'll fix it later but your contribution is welcomed. thank you.
